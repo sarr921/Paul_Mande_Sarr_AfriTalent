@@ -1,0 +1,118 @@
+/* ==========================
+   VARIABLES CSS
+========================== */
+
+:root{
+    --primary-color:#0d6efd;
+    --secondary-color:#212529;
+    --accent-color:#20c997;
+    --light-color:#f8f9fa;
+    --dark-color:#121212;
+    --border-radius:12px;
+    --font-title:'Poppins', sans-serif;
+    --font-text:'Roboto', sans-serif;
+}
+
+/* ==========================
+   GOOGLE FONTS
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+    font-family:var(--font-text);
+    background-color:var(--light-color);
+    color:var(--secondary-color);
+    line-height:1.6;
+}
+
+/* ==========================
+   TITRES
+========================== */
+
+h1,h2,h3,h4,h5,h6{
+    font-family:var(--font-title);
+    font-weight:700;
+}
+
+/* ==========================
+   LIENS
+========================== */
+
+a{
+    text-decoration:none;
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+
+section{
+    padding:80px 0;
+}
+
+/* ==========================
+   IMAGES
+========================== */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+    background-color:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand{
+    font-family:var(--font-title);
+    font-size:1.5rem;
+    font-weight:bold;
+    color:var(--primary-color);
+}
+
+.nav-link{
+    color:var(--secondary-color);
+    font-weight:500;
+}
+
+.nav-link:hover{
+    color:var(--primary-color);
+}
+
+/* ==========================
+   BOUTONS
+========================== */
+
+.btn-primary{
+    border-radius:var(--border-radius);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background-color:var(--secondary-color);
+    color:white;
+    padding:30px 0;
+}
