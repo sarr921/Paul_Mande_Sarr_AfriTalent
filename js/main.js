@@ -1,120 +1,174 @@
-// DARK MODE
+// ================================
+// AFRITALENT - main.js
+// ================================
 
-const darkBtn = document.getElementById("darkModeBtn");
+// Année automatique dans le footer
+const year = document.getElementById("year");
 
-if(localStorage.getItem("theme") === "dark"){
-    document.body.classList.add("dark-mode");
+if (year) {
+    year.textContent = new Date().getFullYear();
 }
 
-if(darkBtn){
-    darkBtn.addEventListener("click", function(){
+// ================================
+// Défilement fluide
+// ================================
 
-        document.body.classList.toggle("dark-mode");
+document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-        if(document.body.classList.contains("dark-mode")){
-            localStorage.setItem("theme","dark");
-        }else{
-            localStorage.setItem("theme","light");
+    link.addEventListener("click", function (e) {
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+
         }
 
     });
-}
-
-
-// NAVBAR DYNAMIQUE
-
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", function(){
-
-    if(window.scrollY > 50){
-        navbar.classList.add("shadow");
-    }else{
-        navbar.classList.remove("shadow");
-    }
 
 });
 
+// ================================
+// Fermer le menu mobile après clic
+// ================================
 
-// RETOUR EN HAUT
+const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+const navbarCollapse = document.querySelector(".navbar-collapse");
 
-const topBtn = document.getElementById("topBtn");
+navLinks.forEach(link => {
 
-window.addEventListener("scroll", function(){
+    link.addEventListener("click", () => {
 
-    if(window.scrollY > 300){
-        topBtn.style.display = "block";
-    }else{
-        topBtn.style.display = "none";
-    }
+        if (navbarCollapse.classList.contains("show")) {
 
-});
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+            });
 
-topBtn.addEventListener("click", function(){
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-});
-// DARK MODE
-
-const darkBtn = document.getElementById("darkModeBtn");
-
-if(localStorage.getItem("theme") === "dark"){
-    document.body.classList.add("dark-mode");
-}
-
-if(darkBtn){
-    darkBtn.addEventListener("click", function(){
-
-        document.body.classList.toggle("dark-mode");
-
-        if(document.body.classList.contains("dark-mode")){
-            localStorage.setItem("theme","dark");
-        }else{
-            localStorage.setItem("theme","light");
+            bsCollapse.hide();
         }
 
     });
+
+});
+
+// ================================
+// Validation formulaire contact
+// ================================
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const nom = document.getElementById("nom");
+        const prenom = document.getElementById("prenom");
+        const email = document.getElementById("email");
+        const sujet = document.getElementById("sujet");
+        const message = document.getElementById("message");
+
+        let valide = true;
+
+        if (nom.value.trim() === "") {
+            valide = false;
+        }
+
+        if (prenom.value.trim() === "") {
+            valide = false;
+        }
+
+        if (email.value.trim() === "") {
+            valide = false;
+        }
+
+        if (sujet.value.trim() === "") {
+            valide = false;
+        }
+
+        if (message.value.trim() === "") {
+            valide = false;
+        }
+
+        if (valide) {
+
+            document.getElementById("successMessage").innerHTML = `
+                <div class="alert alert-success mt-3">
+                    Votre message a été envoyé avec succès !
+                </div>
+            `;
+
+            contactForm.reset();
+
+        } else {
+
+            document.getElementById("successMessage").innerHTML = `
+                <div class="alert alert-danger mt-3">
+                    Veuillez remplir tous les champs.
+                </div>
+            `;
+        }
+
+    });
+
 }
 
+// ================================
+// Filtre freelances
+// ================================
 
-// NAVBAR DYNAMIQUE
+const filter = document.getElementById("filter");
 
-const navbar = document.querySelector(".navbar");
+if (filter) {
 
-window.addEventListener("scroll", function(){
+    filter.addEventListener("change", function () {
 
-    if(window.scrollY > 50){
-        navbar.classList.add("shadow");
-    }else{
-        navbar.classList.remove("shadow");
-    }
+        const value = this.value;
 
-});
+        const freelancers = document.querySelectorAll(".freelancer");
 
+        freelancers.forEach(card => {
 
-// RETOUR EN HAUT
+            if (value === "all") {
 
-const topBtn = document.getElementById("topBtn");
+                card.style.display = "block";
 
-window.addEventListener("scroll", function(){
+            } else if (card.classList.contains(value)) {
 
-    if(window.scrollY > 300){
-        topBtn.style.display = "block";
-    }else{
-        topBtn.style.display = "none";
-    }
+                card.style.display = "block";
 
-});
+            } else {
 
-topBtn.addEventListener("click", function(){
+                card.style.display = "none";
 
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
+            }
+
+        });
+
     });
+
+}
+
+// ================================
+// Animation simple au chargement
+// ================================
+
+window.addEventListener("load", () => {
+
+    document.body.style.opacity = "0";
+
+    setTimeout(() => {
+
+        document.body.style.transition = "0.5s";
+        document.body.style.opacity = "1";
+
+    }, 100);
 
 });
