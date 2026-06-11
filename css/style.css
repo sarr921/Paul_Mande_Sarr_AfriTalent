@@ -1,238 +1,228 @@
-/* ==========================
-   VARIABLES CSS
-========================== */
-
-:root{
-    --primary-color:#0d6efd;
-    --secondary-color:#212529;
-    --accent-color:#20c997;
-    --light-color:#f8f9fa;
-    --dark-color:#121212;
-    --border-radius:12px;
-    --font-title:'Poppins', sans-serif;
-    --font-text:'Roboto', sans-serif;
-}
-
-/* ==========================
-   GOOGLE FONTS
-========================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap');
-
-/* ==========================
-   RESET
-========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-/* ==========================
-   BODY
-========================== */
+/* =========================
+   STYLE GLOBAL
+========================= */
 
 body{
-    font-family:var(--font-text);
-    background-color:var(--light-color);
-    color:var(--secondary-color);
-    line-height:1.6;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-/* ==========================
-   TITRES
-========================== */
-
-h1,h2,h3,h4,h5,h6{
-    font-family:var(--font-title);
-    font-weight:700;
+html{
+    scroll-behavior: smooth;
 }
-
-/* ==========================
-   LIENS
-========================== */
-
-a{
-    text-decoration:none;
-}
-
-/* ==========================
-   SECTIONS
-========================== */
 
 section{
-    padding:80px 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
-/* ==========================
-   IMAGES
-========================== */
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-/* ==========================
+/* =========================
    NAVBAR
-========================== */
+========================= */
 
 .navbar{
-    background-color:white;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .navbar-brand{
-    font-family:var(--font-title);
-    font-size:1.5rem;
-    font-weight:bold;
-    color:var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .nav-link{
-    color:var(--secondary-color);
-    font-weight:500;
+    transition: 0.3s;
 }
 
 .nav-link:hover{
-    color:var(--primary-color);
+    color: #ffc107 !important;
 }
 
-/* ==========================
+/* =========================
+   HERO
+========================= */
+
+#accueil{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+#accueil h1{
+    line-height: 1.3;
+}
+
+#accueil img{
+    max-width: 100%;
+    transition: 0.4s;
+}
+
+#accueil img:hover{
+    transform: scale(1.03);
+}
+
+/* =========================
+   CARTES
+========================= */
+
+.card{
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* =========================
    BOUTONS
-========================== */
+========================= */
 
-.btn-primary{
-    border-radius:var(--border-radius);
+.btn{
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-/* ==========================
+.btn:hover{
+    transform: translateY(-2px);
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.bi{
+    transition: 0.3s;
+}
+
+.card:hover .bi{
+    transform: scale(1.2);
+}
+
+/* =========================
+   FREELANCES
+========================= */
+
+.freelancer img{
+    height: 250px;
+    object-fit: cover;
+}
+
+.freelancer .card-title{
+    font-weight: 600;
+}
+
+.freelancer .btn{
+    width: 100%;
+}
+
+/* =========================
+   TEMOIGNAGES
+========================= */
+
+.carousel-item img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+/* =========================
+   FORMULAIRE
+========================= */
+
+.form-control,
+.form-select{
+    border-radius: 10px;
+}
+
+.form-control:focus,
+.form-select:focus{
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+iframe{
+    border-radius: 10px;
+}
+
+/* =========================
+   TARIFS
+========================= */
+
+.accordion-button:not(.collapsed){
+    background-color: #0d6efd;
+    color: white;
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+}
+
+/* =========================
+   EQUIPE
+========================= */
+
+.card img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* =========================
    FOOTER
-========================== */
+========================= */
 
 footer{
-    background-color:var(--secondary-color);
-    color:white;
-    padding:30px 0;
-}
-/* ==========================
-   HERO
-========================== */
-
-.hero{
-    min-height:80vh;
-    display:flex;
-    align-items:center;
-    background:#f8f9fa;
+    margin-top: 50px;
 }
 
-.hero h1{
-    font-size:3rem;
-    margin-bottom:20px;
+footer a{
+    transition: 0.3s;
 }
 
-.hero p{
-    font-size:1.1rem;
-    margin-bottom:25px;
+footer a:hover{
+    color: #ffc107 !important;
 }
 
-.hero img{
-    border-radius:20px;
+footer .bi{
+    cursor: pointer;
 }
 
-/* ==========================
-   STATISTIQUES
-========================== */
-
-.stats-card{
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    text-align:center;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+footer .bi:hover{
+    color: #ffc107;
 }
 
-/* ==========================
-   BENTO GRID
-========================== */
+/* =========================
+   RESPONSIVE
+========================= */
 
-.bento-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-}
+@media (max-width: 768px){
 
-.bento-card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
+    #accueil h1{
+        font-size: 2rem;
+    }
 
-.bento-card:first-child{
-    grid-column:span 2;
-}
+    .navbar-brand{
+        font-size: 1.2rem;
+    }
 
-/* ==========================
-   CATEGORIES
-========================== */
+    .card{
+        margin-bottom: 20px;
+    }
 
-.category-card{
-    background:white;
-    padding:25px;
-    text-align:center;
-    border-radius:15px;
-    transition:0.3s;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-.category-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 10px 20px rgba(0,0,0,0.15);
-}
-
-.category-card i{
-    font-size:2rem;
-    margin-bottom:15px;
-}
-
-/* ==========================
-   TEMOIGNAGES
-========================== */
-
-.testimonial-card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
-}
-
-.testimonial-card img{
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    margin:auto;
-    margin-bottom:15px;
-}
-
-.stars{
-    color:gold;
-    font-size:1.2rem;
-}
-
-/* ==========================
-   CTA
-========================== */
-
-.cta{
-    background:#0d6efd;
-    color:white;
-    text-align:center;
-    padding:80px 20px;
-    border-radius:20px;
-}
-
-.cta .btn{
-    margin-top:15px;
+    .carousel-item .card{
+        padding: 20px !important;
+    }
 }
