@@ -116,3 +116,123 @@ footer{
     color:white;
     padding:30px 0;
 }
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+    background:#f8f9fa;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    margin-bottom:25px;
+}
+
+.hero img{
+    border-radius:20px;
+}
+
+/* ==========================
+   STATISTIQUES
+========================== */
+
+.stats-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* ==========================
+   BENTO GRID
+========================== */
+
+.bento-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.bento-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.bento-card:first-child{
+    grid-column:span 2;
+}
+
+/* ==========================
+   CATEGORIES
+========================== */
+
+.category-card{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    transition:0.3s;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+.category-card i{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+/* ==========================
+   TEMOIGNAGES
+========================== */
+
+.testimonial-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.testimonial-card img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    margin:auto;
+    margin-bottom:15px;
+}
+
+.stars{
+    color:gold;
+    font-size:1.2rem;
+}
+
+/* ==========================
+   CTA
+========================== */
+
+.cta{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+    border-radius:20px;
+}
+
+.cta .btn{
+    margin-top:15px;
+}
