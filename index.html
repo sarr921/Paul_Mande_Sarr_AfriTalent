@@ -27,7 +27,7 @@
 
   <!-- NAVBAR -->
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNavbar">
 
     <div class="container">
 
@@ -43,7 +43,7 @@
 
       <!-- Nom -->
 
-      <a class="navbar-brand fw-bold" href="#">
+      <a class="navbar-brand fw-bold" href="index.html">
         AfriTalent
       </a>
 
@@ -62,49 +62,49 @@
 
       <!-- Menu -->
 
-<div class="collapse navbar-collapse" id="menu">
+      <div class="collapse navbar-collapse" id="menu">
 
-  <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto">
 
-  <li class="nav-item">
-    <a class="nav-link active" href="index.html">
-      Accueil
-    </a>
-  </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">
+              Accueil
+            </a>
+          </li>
 
-  <li class="nav-item">
-    <a class="nav-link" href="freelances.html">
-      Freelances
-    </a>
-  </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#freelances">
+              Freelances
+            </a>
+          </li>
 
-  <li class="nav-item">
-    <a class="nav-link" href="about.html">
-      À propos
-    </a>
-  </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              À propos
+            </a>
+          </li>
 
-  <li class="nav-item">
-    <a class="nav-link" href="blog.html">
-      Blog
-    </a>
-  </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">
+              Blog
+            </a>
+          </li>
 
-  <li class="nav-item">
-    <a class="nav-link" href="tarifs.html">
-      Tarifs
-    </a>
-  </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tarifs.html">
+              Tarifs
+            </a>
+          </li>
 
-  <li class="nav-item">
-    <a class="nav-link" href="contact.html">
-      Contact
-    </a>
-  </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">
+              Contact
+            </a>
+          </li>
 
-</ul>
+        </ul>
 
-  <!-- Bouton -->
+        <!-- Bouton -->
 
         <a href="#contact" class="btn btn-warning ms-3">
           Rejoindre AfriTalent
@@ -126,18 +126,18 @@
         La plateforme des talents freelances africains
       </h1>
 
-      <p class="mt-4 fs-5">
-        Des talents africains qualifiés pour vos projets digitaux.
-      </p>
+      <h2 class="mt-4 fs-5 fw-normal">
+        Des talents africains qualifiés pour vos projets digitaux, accessibles en quelques clics.
+      </h2>
 
       <div class="mt-4">
 
-        <a href="#freelances" class="btn btn-primary btn-lg m-2">
+        <a href="#freelences" class="btn btn-primary btn-lg m-2">
           Je suis Freelance
         </a>
 
         <a href="#contact" class="btn btn-light btn-lg m-2">
-          Je cherche un Freelance
+          Je cherche un Freelence
         </a>
 
       </div>
@@ -172,7 +172,7 @@
           <div class="card p-4 shadow-sm">
 
             <h2 class="text-primary fw-bold">
-              +2500
+              <span data-target="2500">0</span>
             </h2>
 
             <p>
@@ -188,7 +188,7 @@
           <div class="card p-4 shadow-sm">
 
             <h2 class="text-primary fw-bold">
-              +800
+              <span class="counter" data-target="800">0</span>+
             </h2>
 
             <p>
@@ -204,7 +204,7 @@
           <div class="card p-4 shadow-sm">
 
             <h2 class="text-primary fw-bold">
-              +12000
+              <span class="counter" data-target="12000">0</span>+
             </h2>
 
             <p>
@@ -231,78 +231,50 @@
         Comment ça marche ?
       </h2>
 
-      <div class="row g-4">
+      <div class="bento-grid">
 
-        <div class="col-md-3">
-
-          <div class="card p-4 text-center h-100 shadow-sm">
-
-            <i class="bi bi-person-plus-fill fs-1 text-primary"></i>
-
-            <h4 class="mt-3">
-              Créer un compte
-            </h4>
-
-            <p>
-              Inscrivez-vous gratuitement.
-            </p>
-
-          </div>
-
+        <div class="card p-4 bento-item bento-large shadow-sm">
+          <span class="step-number">1</span>
+          <i class="bi bi-person-plus-fill fs-1 text-primary"></i>
+          <h4 class="mt-3">
+            Créer un compte
+          </h4>
+          <p>
+            Inscrivez-vous gratuitement et créez votre profil en quelques minutes.
+          </p>
         </div>
 
-        <div class="col-md-3">
-
-          <div class="card p-4 text-center h-100 shadow-sm">
-
-            <i class="bi bi-search fs-1 text-primary"></i>
-
-            <h4 class="mt-3">
-              Trouver un projet
-            </h4>
-
-            <p>
-              Explorez des missions adaptées.
-            </p>
-
-          </div>
-
+        <div class="card p-4 bento-item shadow-sm">
+          <span class="step-number">2</span>
+          <i class="bi bi-search fs-1 text-primary"></i>
+          <h4 class="mt-3">
+            Trouver un projet
+          </h4>
+          <p>
+            Explorez des missions adaptées à vos compétences.
+          </p>
         </div>
 
-        <div class="col-md-3">
-
-          <div class="card p-4 text-center h-100 shadow-sm">
-
-            <i class="bi bi-chat-dots-fill fs-1 text-primary"></i>
-
-            <h4 class="mt-3">
-              Collaborer
-            </h4>
-
-            <p>
-              Travaillez avec des entreprises.
-            </p>
-
-          </div>
-
+        <div class="card p-4 bento-item shadow-sm">
+          <span class="step-number">3</span>
+          <i class="bi bi-chat-dots-fill fs-1 text-primary"></i>
+          <h4 class="mt-3">
+            Collaborer
+          </h4>
+          <p>
+            Travaillez avec des entreprises sérieuses partout en Afrique.
+          </p>
         </div>
 
-        <div class="col-md-3">
-
-          <div class="card p-4 text-center h-100 shadow-sm">
-
-            <i class="bi bi-cash-coin fs-1 text-primary"></i>
-
-            <h4 class="mt-3">
-              Être payé
-            </h4>
-
-            <p>
-              Recevez vos paiements rapidement.
-            </p>
-
-          </div>
-
+        <div class="card p-4 bento-item bento-large shadow-sm">
+          <span class="step-number">4</span>
+          <i class="bi bi-cash-coin fs-1 text-primary"></i>
+          <h4 class="mt-3">
+            Être payé
+          </h4>
+          <p>
+            Recevez vos paiements rapidement et en toute sécurité.
+          </p>
         </div>
 
       </div>
@@ -318,93 +290,81 @@
     <div class="container">
 
       <h2 class="text-center fw-bold mb-5">
-        Catégories populaires
+        Catégories services
       </h2>
 
       <div class="row g-4">
 
         <div class="col-md-4">
-
-          <div class="card p-4 text-center h-100 shadow-sm">
-
+          <div class="card p-4 text-center h-100 shadow-sm category-card">
             <i class="bi bi-code-slash fs-1 text-primary"></i>
-
             <h4 class="mt-3">
               Développement Web
             </h4>
-
+            <p class="text-muted mb-0">
+              320 freelances disponibles
+            </p>
           </div>
-
         </div>
 
         <div class="col-md-4">
-
-          <div class="card p-4 text-center h-100 shadow-sm">
-
+          <div class="card p-4 text-center h-100 shadow-sm category-card">
             <i class="bi bi-palette-fill fs-1 text-primary"></i>
-
             <h4 class="mt-3">
               Design UI/UX
             </h4>
-
+            <p class="text-muted mb-0">
+              210 freelances disponibles
+            </p>
           </div>
-
         </div>
 
         <div class="col-md-4">
-
-          <div class="card p-4 text-center h-100 shadow-sm">
-
+          <div class="card p-4 text-center h-100 shadow-sm category-card">
             <i class="bi bi-megaphone-fill fs-1 text-primary"></i>
-
             <h4 class="mt-3">
               Marketing Digital
             </h4>
-
+            <p class="text-muted mb-0">
+              180 freelances disponibles
+            </p>
           </div>
-
         </div>
 
         <div class="col-md-4">
-
-          <div class="card p-4 text-center h-100 shadow-sm">
-
+          <div class="card p-4 text-center h-100 shadow-sm category-card">
             <i class="bi bi-cpu-fill fs-1 text-primary"></i>
-
             <h4 class="mt-3">
               Data & IA
             </h4>
-
+            <p class="text-muted mb-0">
+              140 freelances disponibles
+            </p>
           </div>
-
         </div>
 
         <div class="col-md-4">
-
-          <div class="card p-4 text-center h-100 shadow-sm">
-
+          <div class="card p-4 text-center h-100 shadow-sm category-card">
             <i class="bi bi-pencil-square fs-1 text-primary"></i>
-
             <h4 class="mt-3">
               Rédaction Tech
             </h4>
-
+            <p class="text-muted mb-0">
+              95 freelances disponibles
+            </p>
           </div>
-
         </div>
 
         <div class="col-md-4">
-
-          <div class="card p-4 text-center h-100 shadow-sm">
-
+          <div class="card p-4 text-center h-100 shadow-sm category-card">
             <i class="bi bi-cloud-fill fs-1 text-primary"></i>
-
             <h4 class="mt-3">
               DevOps & Cloud
             </h4>
-
+            <p class="text-muted mb-0">
+              75 freelances disponibles
+            </p>
           </div>
-
         </div>
 
       </div>
@@ -439,7 +399,9 @@
 
               <img
                 src="im/image1.jpeg"
+                alt="Wyclef Gomis"
                 width="100"
+                height="100"
                 class="rounded-circle mx-auto"
               >
 
@@ -452,7 +414,7 @@
               </p>
 
               <p>
-                “AfriTalent m’a permis de trouver mes premiers clients internationaux.”
+                "AfriTalent m'a permis de trouver mes premiers clients internationaux."
               </p>
 
               <div class="text-warning fs-4">
@@ -477,7 +439,9 @@
 
               <img
                 src="im/image2.jpeg"
+                alt="Delphine Bindia"
                 width="100"
+                height="100"
                 class="rounded-circle mx-auto"
               >
 
@@ -490,7 +454,7 @@
               </p>
 
               <p>
-                “Une plateforme moderne et simple pour travailler avec des entreprises sérieuses.”
+                "Une plateforme moderne et simple pour travailler avec des entreprises sérieuses."
               </p>
 
               <div class="text-warning fs-4">
@@ -515,7 +479,9 @@
 
               <img
                 src="im/image3.jpeg"
+                alt="Marlene Sarr"
                 width="100"
+                height="100"
                 class="rounded-circle mx-auto"
               >
 
@@ -528,7 +494,7 @@
               </p>
 
               <p>
-                “AfriTalent m’a offert de belles opportunités en tant que développeuse.”
+                "AfriTalent m'a offert de belles opportunités en tant que développeuse."
               </p>
 
               <div class="text-warning fs-4">
@@ -577,18 +543,74 @@
 
   </section>
 
-  <!-- CTA -->
+  <!-- BLOG -->
 
-  <section class="bg-primary text-white text-center py-5">
+  <section id="blog" class="py-5">
 
     <div class="container">
+
+      <h2 class="text-center fw-bold mb-5">
+        Derniers articles du blog
+      </h2>
+
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">5 conseils pour réussir en freelance</h5>
+              <p class="card-text text-muted">
+                Découvrez les meilleures pratiques pour démarrer et développer votre activité freelance en Afrique.
+              </p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Lire l'article</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Comment fixer ses tarifs ?</h5>
+              <p class="card-text text-muted">
+                Apprenez à estimer vos prestations et à négocier avec vos clients internationaux.
+              </p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Lire l'article</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Les tendances Data & IA en 2026</h5>
+              <p class="card-text text-muted">
+                Un tour d'horizon des compétences les plus recherchées dans le domaine de la data et de l'IA.
+              </p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Lire l'article</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta-section text-white text-center py-5">
+
+    <div class="cta-overlay"></div>
+
+    <div class="container position-relative">
 
       <h2 class="fw-bold">
         Prêt à lancer votre carrière freelance ?
       </h2>
 
       <p class="mt-3">
-        Rejoignez des milliers de talents africains dès aujourd’hui.
+        Rejoignez des milliers de talents africains dès aujourd'hui.
       </p>
 
       <a href="#contact" class="btn btn-light btn-lg mt-3">
@@ -655,9 +677,18 @@
 
         <div class="col-md-3">
 
-          <h5 class="fw-bold">
-            AfriTalent
-          </h5>
+          <div class="d-flex align-items-center mb-2">
+            <img
+              src="im/logo.jpeg"
+              alt="Logo AfriTalent"
+              width="110"
+              height="80"
+              class="rounded-circle me-2"
+            >
+            <h5 class="fw-bold mb-0">
+              AfriTalent
+            </h5>
+          </div>
 
           <p>
             Plateforme africaine mettant en relation freelances et entreprises.
@@ -676,21 +707,32 @@
           <ul class="list-unstyled">
 
             <li>
-              <a href="#accueil" class="text-white text-decoration-none">
+              <a href="index.html#accueil" class="text-white text-decoration-none">
                 Accueil
               </a>
             </li>
 
             <li>
-              <a href="#freelances" class="text-white text-decoration-none">
+              <a href="index.html#freelances" class="text-white text-decoration-none">
                 Freelances
               </a>
             </li>
 
-           
-             <li>
-              <a href="#Apropos" class="text-white text-decoration-none">
-                propos
+            <li>
+              <a href="about.html" class="text-white text-decoration-none">
+                À propos
+              </a>
+            </li>
+
+            <li>
+              <a href="tarifs.html" class="text-white text-decoration-none">
+                Tarifs
+              </a>
+            </li>
+
+            <li>
+              <a href="blog.html" class="text-white text-decoration-none">
+                Blog
               </a>
             </li>
 
@@ -744,13 +786,10 @@
 
           <div class="fs-4">
 
-            <i class="bi bi-facebook me-2"></i>
-
-            <i class="bi bi-instagram me-2"></i>
-
-            <i class="bi bi-linkedin me-2"></i>
-
-            <i class="bi bi-twitter-x"></i>
+            <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
 
           </div>
 

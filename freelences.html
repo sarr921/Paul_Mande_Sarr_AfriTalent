@@ -10,22 +10,94 @@
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-    <img src="im/logo.jpeg" alt="Logo AfriTalent" width="80" height="40" class="me-2">
-    <span class="fw-bold">AfriTalent</span>
-</a>
+
+            <!-- Logo -->
+            <img
+                src="im/logo.jpeg"
+                alt="Logo AfriTalent"
+                width="130"
+                height="80"
+                class="rounded-circle me-2"
+            >
+
+            <!-- Nom -->
+            <a class="navbar-brand fw-bold" href="index.html">
+                AfriTalent
+            </a>
+
+            <!-- Bouton mobile -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Accueil
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="freelences.html">
+                            Freelences
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            À propos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#blog">
+                            Blog
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tarifs.html">
+                            Tarifs
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+                <a href="contact.html" class="btn btn-warning ms-3">
+                    Rejoindre AfriTalent
+                </a>
+
+            </div>
+
         </div>
+
     </nav>
 
     <!-- Section Freelances -->
-    <section class="container py-5">
+    <section class="container py-5 mt-5">
 
         <h1 class="text-center mb-4">Nos Freelances</h1>
 
-        
         <div class="row mb-4">
             <div class="col-md-4 mx-auto">
                 <select id="filter" class="form-select">
@@ -35,8 +107,8 @@
                     <option value="marketing">Marketing Digital</option>
                     <option value="web">Développeur Front-End</option>
                     <option value="design">UI/UX Designer</option>
-                    <option value="marketing">community menager</option>
-                    <option value="web">Devellopeur Full Stack</option>
+                    <option value="marketing">Community Manager</option>
+                    <option value="web">Développeur Full Stack</option>
                     <option value="design">Illustratrice</option>
                     <option value="marketing">Consultant SEO</option>
                 </select>
@@ -44,12 +116,12 @@
         </div>
 
         <!-- Grille de profils -->
-        <div class="row g-4">
+        <div class="row g-4" id="freelancers-list">
 
             <!-- Profil 1 -->
             <div class="col-lg-4 col-md-6 col-12 freelancer web">
                 <div class="card h-100 shadow-sm">
-                    <img src="im/im10.jpeg" class="card-img-top" alt="Freelance">
+                    <img src="im/im10.jpeg" class="card-img-top" alt="Justin Badiane">
                     <div class="card-body">
                         <h5 class="card-title">Justin Badiane</h5>
                         <p class="text-primary">Développeur Web</p>
@@ -64,7 +136,7 @@
             <!-- Profil 2 -->
             <div class="col-lg-4 col-md-6 col-12 freelancer design">
                 <div class="card h-100 shadow-sm">
-                    <img src="im/im11.jpeg" class="card-img-top" alt="Freelance">
+                    <img src="im/im11.jpeg" class="card-img-top" alt="Antoine Mendy">
                     <div class="card-body">
                         <h5 class="card-title">Antoine Mendy</h5>
                         <p class="text-primary">Designer Graphique</p>
@@ -77,9 +149,9 @@
             </div>
 
             <!-- Profil 3 -->
-            <div class="col-lg-4 col-md-6 col-12 freelancer marketing"> 
+            <div class="col-lg-4 col-md-6 col-12 freelancer marketing">
                 <div class="card h-100 shadow-sm">
-                    <img src="im/im12.jpeg" class="card-img-top" alt="Freelance">
+                    <img src="im/im12.jpeg" class="card-img-top" alt="Joaquim Sagnou">
                     <div class="card-body">
                         <h5 class="card-title">Joaquim Sagnou</h5>
                         <p class="text-primary">Marketing Digital</p>
@@ -94,7 +166,7 @@
             <!-- Profil 4 -->
             <div class="col-lg-4 col-md-6 col-12 freelancer web">
                 <div class="card h-100 shadow-sm">
-                    <img src="im/im13.jpeg" class="card-img-top" alt="Freelance">
+                    <img src="im/im13.jpeg" class="card-img-top" alt="William Purna">
                     <div class="card-body">
                         <h5 class="card-title">William Purna</h5>
                         <p class="text-primary">Développeur Front-End</p>
@@ -109,7 +181,7 @@
             <!-- Profil 5 -->
             <div class="col-lg-4 col-md-6 col-12 freelancer design">
                 <div class="card h-100 shadow-sm">
-                    <img src="im/fat.jpeg" class="card-img-top" alt="Freelance">
+                    <img src="im/fat.jpeg" class="card-img-top" alt="Olivia Sanchez">
                     <div class="card-body">
                         <h5 class="card-title">Olivia Sanchez</h5>
                         <p class="text-primary">UI/UX Designer</p>
@@ -124,7 +196,7 @@
             <!-- Profil 6 -->
             <div class="col-lg-4 col-md-6 col-12 freelancer marketing">
                 <div class="card h-100 shadow-sm">
-                    <img src="im/kha.jpeg" class="card-img-top" alt="Freelance">
+                    <img src="im/kha.jpeg" class="card-img-top" alt="Lucia Mbana">
                     <div class="card-body">
                         <h5 class="card-title">Lucia Mbana</h5>
                         <p class="text-primary">Community Manager</p>
@@ -139,7 +211,7 @@
             <!-- Profil 7 -->
             <div class="col-lg-4 col-md-6 col-12 freelancer web">
                 <div class="card h-100 shadow-sm">
-                    <img src="im/i.jpeg" class="card-img-top" alt="Freelance">
+                    <img src="im/i.jpeg" class="card-img-top" alt="Nehemie Kombila">
                     <div class="card-body">
                         <h5 class="card-title">Nehemie Kombila</h5>
                         <p class="text-primary">Développeur Full Stack</p>
@@ -154,7 +226,7 @@
             <!-- Profil 8 -->
             <div class="col-lg-4 col-md-6 col-12 freelancer design">
                 <div class="card h-100 shadow-sm">
-                    <img src="im/im.jpeg" class="card-img-top" alt="Freelance">
+                    <img src="im/im.jpeg" class="card-img-top" alt="Lucie Marone">
                     <div class="card-body">
                         <h5 class="card-title">Lucie Marone</h5>
                         <p class="text-primary">Illustratrice</p>
@@ -169,7 +241,7 @@
             <!-- Profil 9 -->
             <div class="col-lg-4 col-md-6 col-12 freelancer marketing">
                 <div class="card h-100 shadow-sm">
-                    <img src="im/it.jpeg" class="card-img-top" alt="Freelance">
+                    <img src="im/it.jpeg" class="card-img-top" alt="Victor Thomas">
                     <div class="card-body">
                         <h5 class="card-title">Victor Thomas</h5>
                         <p class="text-primary">Consultant SEO</p>
@@ -186,6 +258,7 @@
     </section>
 
     <!-- Lien vers le JavaScript externe -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>
