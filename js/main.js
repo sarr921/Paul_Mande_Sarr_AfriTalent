@@ -223,7 +223,7 @@ if (contactForm) {
       const successDiv = document.getElementById('successMessage');
       if (successDiv) {
         successDiv.style.display = 'block';
-        successDiv.textContent = '✅ Merci ' + prenom + ' ! Votre message a bien été envoyé.';
+        successDiv.textContent = ' Merci ' + prenom + ' ! Votre message a bien été envoyé.';
       }
 
       // Réinitialiser le formulaire après 3 secondes
