@@ -1,23 +1,259 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>AfriTalent — Accueil</title> 
-<!-- Bootstrap 5 via CDN : feuille de style --> 
-<link 
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-rel="stylesheet"> 
-<!-- Votre feuille de style personnelle --> 
-<link rel="stylesheet" href="css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriTalent - Catalogue de Freelances</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body> 
-<!-- Le contenu de la page sera ajoute ici --> 
-<!-- Bootstrap 5 via CDN : script JavaScript --> 
-<script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script> 
-<!-- Votre script JavaScript --> 
-<script src="js/main.js"></script>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+        <div class="container">
+
+            <!-- Logo -->
+            <img
+                src="im/logo.jpeg"
+                alt="Logo AfriTalent"
+                width="130"
+                height="80"
+                class="rounded-circle me-2"
+            >
+
+            <!-- Nom -->
+            <a class="navbar-brand fw-bold" href="index.html">
+                AfriTalent
+            </a>
+
+            <!-- Bouton mobile -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Accueil
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="freelences.html">
+                            Freelences
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            À propos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#blog">
+                            Blogs
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tarifs.html">
+                            Tarifs
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contacts
+                        </a>
+                    </li>
+
+                </ul>
+
+                <a href="contact.html" class="btn btn-warning ms-3">
+                    Rejoindre AfriTalents
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Section Freelances -->
+    <section class="container py-5 mt-5">
+
+        <h1 class="text-center mb-4">Nos Freelances</h1>
+
+<div class="row mb-4">
+    <div class="col-md-4 mx-auto">
+        <select id="filter" class="form-select">
+            <option value="all">Toutes les catégories</option>
+            <option value="web">Développement Web</option>
+            <option value="design">Design Graphique</option>
+            <option value="marketing">Marketing Digital</option>
+        </select>
+    </div>
+</div>
+
+        <!-- Grille de profils -->
+        <div class="row g-4" id="freelancers-list">
+
+            <!-- Profil 1 -->
+            <div class="col-lg-4 col-md-6 col-12 freelancer web">
+                <div class="card h-100 shadow-sm">
+                    <img src="im/im10.jpeg" class="card-img-top" alt="Justin Badiane">
+                    <div class="card-body">
+                        <h5 class="card-title">Justin Badiane</h5>
+                        <p class="text-primary">Développeur Web</p>
+                        <p class="card-text">Création de sites web modernes et responsives.</p>
+                        <p><strong>20 €/h</strong></p>
+                        <p>⭐⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profil 2 -->
+            <div class="col-lg-4 col-md-6 col-12 freelancer design">
+                <div class="card h-100 shadow-sm">
+                    <img src="im/im11.jpeg" class="card-img-top" alt="Antoine Mendy">
+                    <div class="card-body">
+                        <h5 class="card-title">Antoine Mendy</h5>
+                        <p class="text-primary">Designer Graphique</p>
+                        <p class="card-text">Création de logos et d'identités visuelles.</p>
+                        <p><strong>18 €/h</strong></p>
+                        <p>⭐⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profil 3 -->
+            <div class="col-lg-4 col-md-6 col-12 freelancer marketing">
+                <div class="card h-100 shadow-sm">
+                    <img src="im/im12.jpeg" class="card-img-top" alt="Joaquim Sagnou">
+                    <div class="card-body">
+                        <h5 class="card-title">Joaquim Sagnou</h5>
+                        <p class="text-primary">Marketing Digital</p>
+                        <p class="card-text">Gestion des réseaux sociaux et campagnes publicitaires.</p>
+                        <p><strong>22 €/h</strong></p>
+                        <p>⭐⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profil 4 -->
+            <div class="col-lg-4 col-md-6 col-12 freelancer web">
+                <div class="card h-100 shadow-sm">
+                    <img src="im/im13.jpeg" class="card-img-top" alt="William Purna">
+                    <div class="card-body">
+                        <h5 class="card-title">William Purna</h5>
+                        <p class="text-primary">Développeur Front-End</p>
+                        <p class="card-text">Expert HTML, CSS, JavaScript et Bootstrap.</p>
+                        <p><strong>25 €/h</strong></p>
+                        <p>⭐⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profil 5 -->
+            <div class="col-lg-4 col-md-6 col-12 freelancer design">
+                <div class="card h-100 shadow-sm">
+                    <img src="im/fat.jpeg" class="card-img-top" alt="Olivia Sanchez">
+                    <div class="card-body">
+                        <h5 class="card-title">Olivia Sanchez</h5>
+                        <p class="text-primary">UI/UX Designer</p>
+                        <p class="card-text">Création d'interfaces modernes et intuitives.</p>
+                        <p><strong>19 €/h</strong></p>
+                        <p>⭐⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profil 6 -->
+            <div class="col-lg-4 col-md-6 col-12 freelancer marketing">
+                <div class="card h-100 shadow-sm">
+                    <img src="im/kha.jpeg" class="card-img-top" alt="Lucia Mbana">
+                    <div class="card-body">
+                        <h5 class="card-title">Lucia Mbana</h5>
+                        <p class="text-primary">Community Manager</p>
+                        <p class="card-text">Animation et gestion de communautés en ligne.</p>
+                        <p><strong>17 €/h</strong></p>
+                        <p>⭐⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profil 7 -->
+            <div class="col-lg-4 col-md-6 col-12 freelancer web">
+                <div class="card h-100 shadow-sm">
+                    <img src="im/i.jpeg" class="card-img-top" alt="Nehemie Kombila">
+                    <div class="card-body">
+                        <h5 class="card-title">Nehemie Kombila</h5>
+                        <p class="text-primary">Développeur Full Stack</p>
+                        <p class="card-text">Développement d'applications web complètes.</p>
+                        <p><strong>30 €/h</strong></p>
+                        <p>⭐⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profil 8 -->
+            <div class="col-lg-4 col-md-6 col-12 freelancer design">
+                <div class="card h-100 shadow-sm">
+                    <img src="im/im.jpeg" class="card-img-top" alt="Lucie Marone">
+                    <div class="card-body">
+                        <h5 class="card-title">Lucie Marone</h5>
+                        <p class="text-primary">Illustratrice</p>
+                        <p class="card-text">Illustrations créatives et branding visuel.</p>
+                        <p><strong>21 €/h</strong></p>
+                        <p>⭐⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profil 9 -->
+            <div class="col-lg-4 col-md-6 col-12 freelancer marketing">
+                <div class="card h-100 shadow-sm">
+                    <img src="im/it.jpeg" class="card-img-top" alt="Victor Thomas">
+                    <div class="card-body">
+                        <h5 class="card-title">Victor Thomas</h5>
+                        <p class="text-primary">Consultant SEO</p>
+                        <p class="card-text">Optimisation du référencement naturel des sites.</p>
+                        <p><strong>24 €/h</strong></p>
+                        <p>⭐⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Lien vers le JavaScript externe -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
-</html
+</html>
