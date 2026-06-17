@@ -43,3 +43,22 @@
   border-radius: 16px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.4);
 }
+/* ================================================
+   4. STATISTIQUES
+   ================================================ */
+.stats-section .card {
+  border: none;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.stats-section .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.stats-section h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #F5A623;
+}
