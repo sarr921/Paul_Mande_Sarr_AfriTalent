@@ -71,3 +71,36 @@ if (fadeElements.length > 0) {
     fadeObserver.observe(el);
   });
 }
+/* 5. FILTRAGE DES FREELANCES */
+
+const filterSelect = document.getElementById('filter');
+
+if (filterSelect) {
+  filterSelect.addEventListener('change', function () {
+    const value = this.value;
+    const cards = document.querySelectorAll('.freelancer');
+
+    cards.forEach(function (card) {
+      if (value === 'all' || card.classList.contains(value)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+}
+
+/* 6. VALIDATION FORMULAIRE */
+
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+
+  contactForm.addEventListener('submit', function (e) {
+
+    e.preventDefault();
+
+    alert("Message envoyé avec succès !");
+  });
+
+}
