@@ -1,0 +1,45 @@
+/* ================================================
+   3. SECTION HERO
+   ================================================ */
+#accueil {
+  background: linear-gradient(135deg, #0D1B2A 60%, #1a3a5c 100%);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+#accueil h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+#accueil h1 span,
+#accueil .highlight {
+  color: #F5A623;
+}
+
+#accueil p.fs-5 {
+  color: #c8d8e8;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+#accueil .btn-primary {
+  background: #F5A623;
+  border: none;
+  color: #0D1B2A;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 12px 30px;
+}
+
+#accueil .btn-light {
+  border-radius: 25px;
+  padding: 12px 30px;
+}
+
+#accueil img {
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
