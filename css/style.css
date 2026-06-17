@@ -62,3 +62,35 @@
   font-weight: 700;
   color: #F5A623;
 }
+/* ================================================
+   5. COMMENT ÇA MARCHE
+   ================================================ */
+.bento-grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.bento-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.bento-card i {
+  color: #F5A623;
+}
+
+@media(max-width:991px){
+  .bento-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width:575px){
+  .bento-grid{
+    grid-template-columns:1fr;
+  }
+}
