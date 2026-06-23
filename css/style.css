@@ -1,3 +1,77 @@
+/* ============================================
+   AfriTalent — style.css
+   Google Font : Poppins (chargée dans le HTML)
+   Couleurs principales :
+     - Or africain  : #F5A623
+     - Bleu profond : #0D1B2A
+     - Vert succès  : #28A745
+     - Blanc doux   : #F8F9FA
+============================================ */
+
+
+/* ================================================
+   1. RESET & BASE
+   ================================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #0D1B2A;
+  background: #F8F9FA;
+}
+
+
+/* ================================================
+   2. NAVBAR
+   ================================================
+   La classe .scrolled est ajoutée par main.js
+   quand l'utilisateur descend la page.
+   ================================================ */
+.navbar {
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.navbar.scrolled {
+  background: #000 !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: #F5A623 !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #F5A623 !important;
+}
+
+/* Bouton CTA "Rejoindre AfriTalent" */
+.btn-warning {
+  background: #F5A623;
+  border: none;
+  font-weight: 600;
+  color: #0D1B2A;
+  border-radius: 25px;
+  padding: 8px 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-warning:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(245, 166, 35, 0.4);
+}
+
+
 /* ================================================
    3. SECTION HERO
    ================================================ */
@@ -14,6 +88,7 @@
   line-height: 1.2;
 }
 
+/* Mot mis en valeur dans le H1 : <span class="highlight"> */
 #accueil h1 span,
 #accueil .highlight {
   color: #F5A623;
@@ -32,29 +107,46 @@
   font-weight: 600;
   border-radius: 25px;
   padding: 12px 30px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#accueil .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(245, 166, 35, 0.45);
 }
 
 #accueil .btn-light {
   border-radius: 25px;
   padding: 12px 30px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+#accueil .btn-light:hover {
+  transform: translateY(-3px);
 }
 
 #accueil img {
   border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
+
+
 /* ================================================
    4. STATISTIQUES
+   ================================================
+   Ajoutez la classe "stats-section" à la <section>
+   des statistiques dans index.html.
    ================================================ */
 .stats-section .card {
   border: none;
   border-radius: 16px;
-  transition: 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .stats-section .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .stats-section h2 {
@@ -62,35 +154,360 @@
   font-weight: 700;
   color: #F5A623;
 }
+
+
 /* ================================================
-   5. COMMENT ÇA MARCHE
+   5. COMMENT ÇA MARCHE — Bento Grid
+   ================================================
+   Utilisez cette structure HTML :
+   <div class="bento-grid">
+     <div class="bento-card">...</div>
+     ...
+   </div>
+   Les cartes 1 et 3 sont plus hautes (grid-row span 2).
    ================================================ */
 .bento-grid {
   display: grid;
   gap: 1.2rem;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+}
+
+/* Cartes 1 et 3 : plus hautes */
+.bento-grid .bento-card:nth-child(1),
+.bento-grid .bento-card:nth-child(3) {
+  grid-row: span 2;
 }
 
 .bento-card {
-  background: white;
+  background: #fff;
   border-radius: 20px;
   padding: 2rem;
   text-align: center;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bento-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.13);
+}
+
+/* Numéro d'étape dans un cercle doré */
+.bento-card .step-number {
+  display: inline-block;
+  background: #F5A623;
+  color: #0D1B2A;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
 }
 
 .bento-card i {
   color: #F5A623;
 }
 
-@media(max-width:991px){
-  .bento-grid{
-    grid-template-columns: repeat(2,1fr);
+/* Tablette : 2 colonnes */
+@media (max-width: 991px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bento-grid .bento-card:nth-child(1),
+  .bento-grid .bento-card:nth-child(3) {
+    grid-row: span 1;
   }
 }
 
-@media(max-width:575px){
-  .bento-grid{
-    grid-template-columns:1fr;
+/* Mobile : 1 colonne */
+@media (max-width: 575px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
   }
+}
+
+
+/* ================================================
+   6. CATÉGORIES DE SERVICES
+   ================================================
+   Remplacez class="card" par class="category-card"
+   sur les cartes des catégories dans index.html.
+   ================================================ */
+.category-card {
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 1.8rem;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s,
+              border-color 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 14px 32px rgba(245, 166, 35, 0.2);
+  border-color: #F5A623;
+  background: linear-gradient(135deg, #fff8ec, #fff);
+}
+
+.category-card i {
+  font-size: 2.4rem;
+  color: #F5A623;
+  transition: transform 0.3s;
+}
+
+.category-card:hover i {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.category-card h4 {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Petit texte "Ex: 120 freelances" sous le titre */
+.category-card .freelance-count {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+
+/* ================================================
+   7. TÉMOIGNAGES (Carousel Bootstrap)
+   ================================================ */
+.carousel-item .card {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.09);
+  padding: 2.5rem 3rem;
+}
+
+/* Avatar avec bordure dorée */
+.carousel-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 3px solid #F5A623;
+}
+
+/* Flèches du carousel visibles sur fond clair */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+
+/* ================================================
+   8. BANDEAU CTA
+   ================================================
+   Ajoutez class="cta-section" à la <section> CTA.
+   ================================================ */
+.cta-section {
+  background: linear-gradient(135deg, #F5A623, #e08c00);
+  color: #0D1B2A;
+}
+
+.cta-section h2 {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.cta-section .btn-light {
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 12px 36px;
+  color: #0D1B2A;
+  transition: transform 0.2s;
+}
+
+.cta-section .btn-light:hover {
+  transform: translateY(-3px);
+}
+
+
+/* ================================================
+   9. FORMULAIRE CONTACT
+   ================================================ */
+/* Bordure dorée au focus */
+.form-control:focus,
+.form-select:focus {
+  border-color: #F5A623;
+  box-shadow: 0 0 0 0.2rem rgba(245, 166, 35, 0.25);
+}
+
+/* Message de succès (affiché par main.js) */
+#successMessage {
+  display: none;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+
+/* ================================================
+   10. CARTES FREELANCES (freelances.html)
+   ================================================ */
+.freelancer .card {
+  border-radius: 16px;
+  border: none;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.freelancer .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+}
+
+/* Image de profil : hauteur fixe, recadrée */
+.freelancer .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+
+/* ================================================
+   11. TARIFS (tarifs.html)
+   ================================================ */
+/* Bordure du plan "Populaire" plus épaisse */
+.card.border-warning {
+  border-width: 2px !important;
+}
+
+
+/* ================================================
+   12. FOOTER
+   ================================================ */
+footer {
+  font-size: 0.9rem;
+}
+
+footer a:hover {
+  color: #F5A623 !important;
+  text-decoration: underline !important;
+}
+
+footer .bi {
+  font-size: 1.4rem;
+  transition: color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+footer .bi:hover {
+  color: #F5A623;
+  transform: scale(1.2);
+}
+
+
+/* ================================================
+   13. UTILITAIRES GLOBAUX
+   ================================================ */
+
+/* Titre de section avec soulignement doré centré */
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #F5A623;
+  border-radius: 2px;
+  margin: 8px auto 0;
+}
+
+/* Apparition au scroll — activée par main.js */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accessibilité : désactive les animations si demandé */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+/* ================================================
+   14. DARK MODE
+   ================================================ */
+
+.dark-mode {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .card,
+.dark-mode .category-card,
+.dark-mode .bento-card {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .bg-light {
+  background-color: #1a1a1a !important;
+}
+
+.dark-mode .text-muted {
+  color: #cccccc !important;
+}
+
+.dark-mode .form-control,
+.dark-mode textarea {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #444;
+}
+
+.dark-mode .form-control::placeholder,
+.dark-mode textarea::placeholder {
+  color: #bbbbbb;
+}
+
+.dark-mode footer {
+  background-color: #000 !important;
+}
+
+.dark-mode .navbar {
+  background-color: #000 !important;
+}
+
+.dark-mode section {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode p,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode li,
+.dark-mode a {
+  color: #ffffff;
 }
